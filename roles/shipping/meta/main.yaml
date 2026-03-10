@@ -1,0 +1,2 @@
+dependencies:
+  - role: common #dependencie on common role

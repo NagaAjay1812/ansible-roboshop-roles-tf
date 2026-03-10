@@ -1,0 +1,22 @@
+- name: Remove the nginx default directory
+  tags:
+    - deployment
+  ansible.builtin.file:
+    path: /usr/share/nginx/html
+    state: absent
+
+- name: create the nginx html directory
+  ansible.builtin.file:
+    path: /usr/share/nginx/html
+    state: directory
+
+- name: Download the frontend code
+  ansible.builtin.get_url:
+    url: https://roboshop-artifacts.s3.amazonaws.com/frontend-v3.zip
+    dest: /tmp/frontend.zip
+
+- name: Unarchive the frontend code
+  ansible.builtin.unarchive:
+    src: /tmp/frontend.zip
+    dest: /usr/share/nginx/html
+    remote_src: yes

@@ -1,0 +1,8 @@
+- name: Reload systemd and restart nginx
+  tags:
+    - deployment
+  ansible.builtin.service:
+    name: nginx
+    daemon_reload: yes
+    state: restarted
+    enabled: yes
