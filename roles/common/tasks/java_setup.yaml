@@ -7,8 +7,6 @@
     - mysql
 
 - name: Install the dependencies
-  tags:
-    - deployment
   ansible.builtin.command: mvn clean package
   args:
     chdir: /app
