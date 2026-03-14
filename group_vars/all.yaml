@@ -1,0 +1,12 @@
+ansible_user=ec2-user
+ansible_password=DevOps321
+MONGODB_HOST=mongodb-"{{ env }}".cloudkarna.in
+CATALOGUE_HOST=catalogue-"{{ env }}".cloudkarna.in
+REDIS_HOST=redis-"{{ env }}".cloudkarna.in
+CART_HOST=cart-"{{ env }}".cloudkarna.in
+SHIPPING_HOST=shipping-"{{ env }}".cloudkarna.in
+RABBITMQ_HOST=rabbitmq-"{{ env }}".cloudkarna.in
+PAYMENT=payment-"{{ env }}".cloudkarna.in
+MYSQL_HOST=mysql-"{{ env }}".cloudkarna.in
+USER_HOST=user-"{{ env }}".cloudkarna.in
+PAYMENT_HOST=payment-"{{ env }}".cloudkarna.in
