@@ -1,6 +1,4 @@
 - name: creating the system user roboshop
-  tags:
-    - deployment
   ansible.builtin.user:
     name: roboshop
     system: true #system user
